@@ -339,7 +339,7 @@ This project was developed as part of an iOS development assessment.
 
 ## License
 
-This project is for educational and assessment purposes. All rights reserved.
+This project is for educational and assessment purposes.
 
 ---
 
