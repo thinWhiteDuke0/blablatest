@@ -21,7 +21,8 @@ For demonstration and testing purposes, a test account is available:
 - **Default:** Portrait mode for all screens  
 - **Exception:** Profile view supports both portrait and landscape orientations  
 
-Landscape mode provides an enhanced viewing experience for profile information.
+Check Preview:
+https://git.epam.com/giorgi_manjavidze/finalapp/-/blob/main/RPReplay_Final1758839414.MP4?ref_type=heads
 
 
 ## Features
@@ -319,19 +320,10 @@ The project follows Swift style guidelines and can be enhanced with SwiftLint fo
 - **User Data**: Encrypted local storage where applicable
 - **Network Security**: HTTPS-only communication
 
-## Future Enhancements
-
-- [ ] Offline support with Core Data
-- [ ] Push notifications for favorite cities
-- [ ] Weather integration
-- [ ] Social sharing features
-- [ ] Advanced filtering and sorting
-- [ ] City comparison tools
-- [ ] Travel planning features
 
 ## Contributing
 
-This project was developed as part of an iOS development assessment. For contributions or questions, please follow the established code style and testing practices.
+This project was developed as part of an iOS development assessment.
 
 ## License
 
@@ -340,6 +332,5 @@ This project is for educational and assessment purposes. All rights reserved.
 ---
 
 **Developer**: Giorgi Manjavidze  
-**Email**: Giorgi_manjavidze@epam.com  
 **Project**: Final iOS Assessment - WorldCities App  
 **Technology Stack**: SwiftUI, Firebase, MapKit, Combine, URLSession
