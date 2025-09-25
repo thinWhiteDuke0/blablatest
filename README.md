@@ -2,6 +2,28 @@
 
 A modern iOS application built with SwiftUI that allows users to explore cities around the world, save favorites, and view detailed information with interactive maps.
 
+# Demo Account & Testing
+
+## Test Credentials
+
+For demonstration and testing purposes, a test account is available:
+
+- **Email:** test@test.com  
+- **Password:** testtest  
+
+> **Note:** The API key is intentionally left unsecured in the code for assessment and testing purposes.  
+> In a production environment, API keys should be properly secured using environment variables or secure storage solutions.
+
+---
+
+## Orientation Support
+
+- **Default:** Portrait mode for all screens  
+- **Exception:** Profile view supports both portrait and landscape orientations  
+
+Landscape mode provides an enhanced viewing experience for profile information.
+
+
 ## Features
 
 ### 🏙️ City Exploration
