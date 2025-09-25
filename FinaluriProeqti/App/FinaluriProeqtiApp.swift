@@ -9,7 +9,6 @@ import SwiftUI
 import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    // Add this static variable
     static var orientationLock = UIInterfaceOrientationMask.portrait
 
     func application(_ application: UIApplication,
@@ -32,6 +31,7 @@ struct FinaluriProeqtiApp: App {
         WindowGroup {
             FirstScreen()
                 .environmentObject(favoritesManager)
+                .preferredColorScheme(.light)
         }
     }
 }

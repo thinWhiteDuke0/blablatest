@@ -6,13 +6,6 @@
 //
 
 
-//
-//  FavoritesView.swift
-//  FinalTaskApp
-//
-//  Created by Assistant on 24.09.25.
-//
-
 import SwiftUI
 
 struct FavoritesView: View {
@@ -276,7 +269,6 @@ struct FavoriteCityCard: View {
     var body: some View {
         Button(action: onTap) {
             VStack(spacing: 12) {
-                // Header with country code and remove button
                 HStack {
                     Text(city.countryCode)
                         .font(.system(size: 14, weight: .bold))
@@ -307,8 +299,7 @@ struct FavoriteCityCard: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
-                
-                // City info
+
                 VStack(alignment: .leading, spacing: 6) {
                     Text(city.city)
                         .font(.system(size: 18, weight: .bold, design: .rounded))
@@ -321,7 +312,7 @@ struct FavoriteCityCard: View {
                         .foregroundColor(Color(red: 0.6, green: 0.3, blue: 0.45))
                         .lineLimit(1)
                     
-                    if let population = city.population {
+                    if city.population != nil {
                         HStack {
                             Image(systemName: "person.2.fill")
                                 .font(.system(size: 10))
@@ -336,7 +327,6 @@ struct FavoriteCityCard: View {
                 
                 Spacer()
                 
-                // Coordinates
                 HStack {
                     Image(systemName: "location.fill")
                         .font(.system(size: 10))

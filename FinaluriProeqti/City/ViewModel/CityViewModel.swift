@@ -94,13 +94,12 @@ class CityViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
 
-        // Small delay for smoother UX
-        try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 seconds
+
 
         do {
             let searchResults = try await service.searchCities(namePrefix: trimmed)
             cities = searchResults
-            hasMoreData = false // Searches are not paginated
+            hasMoreData = false 
         } catch {
             if !Task.isCancelled {
                 handleError(error)
@@ -110,7 +109,6 @@ class CityViewModel: ObservableObject {
         isLoading = false
     }
 
-    // MARK: - Reset state
     private func resetToInitialState() {
         searchTask?.cancel()
         currentOffset = 0
@@ -123,15 +121,12 @@ class CityViewModel: ObservableObject {
         }
     }
 
-    // MARK: - Error handling
     private func handleError(_ error: Error) {
         if let cityError = error as? CityError {
             errorMessage = cityError.errorDescription
         } else {
             errorMessage = "An unexpected error occurred: \(error.localizedDescription)"
         }
-
-        print("CityViewModel Error: \(error)")
     }
 
     func clearError() {

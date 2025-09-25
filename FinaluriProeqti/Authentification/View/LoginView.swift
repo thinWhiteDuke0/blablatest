@@ -1,11 +1,4 @@
 //
-//  Login.swift
-//  FinaluriProeqti
-//
-//  Created by Giorgi Manjavidze on 24.09.25.
-//
-
-//
 //  LoginView.swift
 //  FinaluriProeqti
 //
@@ -20,7 +13,6 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background
                 AppColors.backgroundGradient
                     .ignoresSafeArea()
 
@@ -28,7 +20,6 @@ struct LoginView: View {
                     VStack(spacing: 32) {
                         Spacer(minLength: 60)
 
-                        // Logo Section
                         VStack(spacing: 16) {
                             ZStack {
                                 Circle()
@@ -63,18 +54,7 @@ struct LoginView: View {
                         }
                         .padding(.horizontal, 20)
 
-                        // Forgot Password
-                        NavigationLink {
-                            Text("Forgot Password")
-                        } label: {
-                            Text("Forgot Password?")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(AppColors.primaryGreen)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .padding(.horizontal, 20)
 
-                        // Login Button
                         Button {
                             Task { try await viewModel.login() }
                         } label: {
@@ -120,20 +100,7 @@ struct LoginView: View {
     }
 }
 
-// MARK: - Pretty Text Field Modifier
-struct PrettyTextFieldModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(size: 16, weight: .medium))
-            .padding(.horizontal, 16)
-            .padding(.vertical, 14)
-            .background(
-                RoundedRectangle(cornerRadius: 14)
-                    .fill(Color.white)
-                    .shadow(color: AppColors.cardShadow.opacity(0.1), radius: 8, x: 0, y: 4)
-            )
-    }
-}
+
 
 #Preview {
     LoginView()

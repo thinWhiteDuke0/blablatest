@@ -35,7 +35,7 @@ struct CityMapView: View {
             Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: [city]) { city in
                 MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude)) {
                     VStack {
-                        // Custom pin
+                        //  PIN
                         ZStack {
                             Circle()
                                 .fill(Color.blue)
@@ -47,7 +47,6 @@ struct CityMapView: View {
                                 .font(.system(size: 16, weight: .bold))
                         }
 
-                        // City name
                         Text(city.city)
                             .font(.caption)
                             .fontWeight(.semibold)
@@ -63,7 +62,7 @@ struct CityMapView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                  Button(LocalizationKey.done) {
+                  Button("Done") {
                         dismiss()
                     }
                 }

@@ -9,11 +9,6 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
-
-import Firebase
-import FirebaseAuth
-import FirebaseFirestore
-
 class AuthService: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
 
@@ -22,12 +17,10 @@ class AuthService: ObservableObject {
     init() {
         self.userSession = Auth.auth().currentUser
 
-        // Listen for auth state changes to handle app restart scenarios
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             DispatchQueue.main.async {
                 self?.userSession = user
 
-                // Fetch user data when auth state is restored
                 if user != nil {
                     Task {
                         try? await UserService.shared.fetchCurrentUser()
@@ -47,11 +40,8 @@ class AuthService: ObservableObject {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
 
-            // Trigger user data fetch after successful login
             try await UserService.shared.fetchCurrentUser()
-            print("User logged in successfully")
         } catch {
-            print("Login error: \(error)")
             throw error
         }
     }
@@ -66,11 +56,8 @@ class AuthService: ObservableObject {
 
             try await uploadUserData(withEmail: email, fullname: fullname, username: username, id: result.user.uid)
 
-            // Fetch user data after successful registration
             try await UserService.shared.fetchCurrentUser()
-            print("User created and data uploaded successfully")
         } catch {
-            print("Create user error: \(error)")
             throw error
         }
     }
@@ -79,7 +66,6 @@ class AuthService: ObservableObject {
     func signOut() {
         try? Auth.auth().signOut()
         self.userSession = nil
-        // Clear user data on sign out
         UserService.shared.clearCurrentUser()
     }
 
@@ -94,9 +80,7 @@ class AuthService: ObservableObject {
         guard let userData = try? Firestore.Encoder().encode(user) else { return }
         do {
             try await Firestore.firestore().collection("users").document(id).setData(userData)
-            print("User data uploaded successfully to Firestore")
         } catch {
-            print("Error uploading to Firestore: \(error)")
             throw error
         }
     }

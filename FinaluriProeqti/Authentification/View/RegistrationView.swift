@@ -13,7 +13,6 @@ struct RegistrationView: View {
 
     var body: some View {
         ZStack {
-            // Background
             AppColors.backgroundGradient
                 .ignoresSafeArea()
 
@@ -21,7 +20,6 @@ struct RegistrationView: View {
                 VStack(spacing: 32) {
                     Spacer(minLength: 40)
 
-                    // Header Section
                     VStack(spacing: 16) {
                         ZStack {
                             Circle()
@@ -43,7 +41,7 @@ struct RegistrationView: View {
                             .foregroundColor(AppColors.secondaryText)
                     }
 
-                    // Form Section
+
                     VStack(spacing: 16) {
                         TextField("Enter your email", text: $viewModel.email)
                             .autocapitalization(.none)
@@ -62,7 +60,7 @@ struct RegistrationView: View {
                     }
                     .padding(.horizontal, 20)
 
-                    // Sign Up Button
+
                     Button {
                         Task { try await viewModel.createUser() }
                     } label: {

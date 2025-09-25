@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Create a single shared FavoritesManager instance
+
     @StateObject private var favoritesManager = FavoritesManager()
     @State private var selectedTab = 0
 

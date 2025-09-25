@@ -24,7 +24,6 @@ struct CityDetailView: View {
 
     var body: some View {
         ZStack {
-            // Modern green background using AppColors
             LinearGradient(
                 colors: [
                     AppColors.softGreen,
@@ -38,21 +37,11 @@ struct CityDetailView: View {
 
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    // Minimal header with floating cards
                     modernHeaderSection
-
-                    // Content with glassmorphism cards
                     VStack(spacing: 24) {
-                        // Hero stats cards
                         heroStatsSection
-
-                        // Main info card
                         mainInfoCard
-
-                        // Location details
                         locationDetailsCard
-
-                        // Action section
                         modernActionSection
                     }
                     .padding(.horizontal, 20)
@@ -62,7 +51,6 @@ struct CityDetailView: View {
             }
             .coordinateSpace(name: "scroll")
 
-            // Floating navigation
             floatingNavigation
         }
         .sheet(isPresented: $showingMap) {
@@ -73,14 +61,12 @@ struct CityDetailView: View {
     // MARK: - Modern Header Section
     private var modernHeaderSection: some View {
         ZStack {
-            // Gradient backdrop using AppColors
             RoundedRectangle(cornerRadius: 0)
                 .fill(AppColors.headerGradient)
                 .frame(height: 280)
 
-            // Main content
             VStack(spacing: 20) {
-                // Flag with modern styling
+
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(AppColors.surfaceColor.opacity(0.2))
@@ -137,21 +123,21 @@ struct CityDetailView: View {
         HStack(spacing: 16) {
             ModernStatCard(
                 value: formatPopulation(city.population ?? 0),
-                title: "Population",
+                title: NSLocalizedString("Population", comment: "Population stat title"),
                 icon: "person.3.fill",
                 accentColor: AppColors.lightGreen
             )
 
             ModernStatCard(
                 value: city.countryCode,
-                title: "Country",
+                title: NSLocalizedString("Country", comment: "Country stat title"),
                 icon: "flag.fill",
                 accentColor: AppColors.accentGreen
             )
 
             ModernStatCard(
                 value: String(city.region.prefix(8)) + "...",
-                title: "Region",
+                title: NSLocalizedString("Region", comment: "Region stat title"),
                 icon: "map.fill",
                 accentColor: AppColors.highlightColor
             )
@@ -162,7 +148,7 @@ struct CityDetailView: View {
     private var mainInfoCard: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
-              Text(LocalizationKey.cityOverview.localized)
+                Text("City Overview")
                     .font(.system(size: 22, weight: .bold, design: .rounded))
                     .foregroundColor(AppColors.surfaceColor)
 
@@ -175,31 +161,31 @@ struct CityDetailView: View {
 
             VStack(spacing: 16) {
                 ModernDetailRow(
-                    title: LocalizationKey.fullName.localized,
+                    title: NSLocalizedString("Full Name", comment: "Full name label"),
                     value: city.name,
                     icon: "text.cursor"
                 )
 
                 ModernDetailRow(
-                    title: LocalizationKey.countryCode.localized,
+                    title: NSLocalizedString("Country Code", comment: "Country code label"),
                     value: city.countryCode,
                     icon: "flag.2.crossed.fill"
                 )
 
                 ModernDetailRow(
-                    title: LocalizationKey.region.localized,
+                    title: NSLocalizedString("Region", comment: "Region label"),
                     value: city.region,
                     icon: "location.fill"
                 )
 
                 ModernDetailRow(
-                    title: LocalizationKey.coordinates.localized,
+                    title: NSLocalizedString("Coordinates", comment: "Coordinates label"),
                     value: String(format: "%.4f°, %.4f°", city.latitude, city.longitude),
                     icon: "globe"
                 )
 
                 ModernDetailRow(
-                    title: LocalizationKey.populationCount.localized,
+                    title: NSLocalizedString("Population Count", comment: "Population count label"),
                     value: city.populationFormatted,
                     icon: "person.3.sequence.fill"
                 )
@@ -213,7 +199,7 @@ struct CityDetailView: View {
     private var locationDetailsCard: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
-                Text(LocalizationKey.locationDetails)
+                Text("Location Details")
                     .font(.system(size: 22, weight: .bold, design: .rounded))
                     .foregroundColor(AppColors.surfaceColor)
 
@@ -227,17 +213,17 @@ struct CityDetailView: View {
             VStack(spacing: 18) {
                 LocationFeatureCard(
                     icon: "binoculars.fill",
-                    title: LocalizationKey.explore,
-                    subtitle: "Discover \(city.city)",
-                    description: LocalizationKey.findAmazingPlaces,
+                    title: NSLocalizedString("Explore", comment: "Explore title"),
+                    subtitle: String(format: NSLocalizedString("Discover %@", comment: "Discover city format"), city.city),
+                    description: NSLocalizedString("Find amazing places and hidden gems", comment: "Explore description"),
                     accentColor: AppColors.highlightColor
                 )
 
                 LocationFeatureCard(
                     icon: "heart.circle.fill",
-                    title: "Favorites",
-                    subtitle: "Save City",
-                    description: LocalizationKey.keepTrackCities,
+                    title: NSLocalizedString("Favorites", comment: "Favorites title"),
+                    subtitle: NSLocalizedString("Save City", comment: "Save city subtitle"),
+                    description: NSLocalizedString("Keep track of cities you love", comment: "Favorites description"),
                     accentColor: AppColors.featuredColor
                 )
             }
@@ -250,7 +236,7 @@ struct CityDetailView: View {
     private var modernActionSection: some View {
         VStack(spacing: 16) {
             ModernActionButton(
-              title: LocalizationKey.viewOnMap,
+                title: NSLocalizedString("View on Map", comment: "View on map button"),
                 icon: "map.fill",
                 gradient: LinearGradient(
                     colors: [AppColors.lightGreen, AppColors.primaryGreen],
@@ -312,12 +298,16 @@ struct CityDetailView: View {
     }
 
     private func formatPopulation(_ population: Int?) -> String {
-        guard let population = population else { return "N/A" }
+        guard let population = population else {
+            return NSLocalizedString("N/A", comment: "Not available")
+        }
 
         if population >= 1_000_000 {
-            return String(format: "%.1fM", Double(population) / 1_000_000)
+            let millions = Double(population) / 1_000_000
+            return String(format: NSLocalizedString("%.1fM", comment: "Population in millions"), millions)
         } else if population >= 1_000 {
-            return String(format: "%.0fK", Double(population) / 1_000)
+            let thousands = Double(population) / 1_000
+            return String(format: NSLocalizedString("%.0fK", comment: "Population in thousands"), thousands)
         } else {
             return "\(population)"
         }

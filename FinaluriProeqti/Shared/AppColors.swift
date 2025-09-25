@@ -6,13 +6,6 @@
 //
 
 
-//
-//  AppColors.swift
-//  FinaluriProeqti
-//
-//  Created by Giorgi Manjavidze on 25.09.25.
-//
-
 import SwiftUI
 
 struct AppColors {

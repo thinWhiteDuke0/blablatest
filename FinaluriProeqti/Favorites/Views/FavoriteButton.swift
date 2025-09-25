@@ -6,12 +6,6 @@
 //
 
 
-//
-//  FavoriteButton.swift
-//  FinalTaskApp
-//
-//  Created by Assistant on 24.09.25.
-//
 
 import SwiftUI
 

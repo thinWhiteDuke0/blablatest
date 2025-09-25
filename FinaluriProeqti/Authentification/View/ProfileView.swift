@@ -63,7 +63,7 @@ struct ProfileView: View {
             }
 
             Button(action: {
-                // Add photo editing functionality here
+                // Photo edit functionality ... if i had time
             }) {
                 Text("Edit Photo")
                     .font(.system(size: 14, weight: .semibold))

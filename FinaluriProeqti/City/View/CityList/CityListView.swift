@@ -5,7 +5,6 @@
 //  Created by Giorgi Manjavidze on 24.09.25.
 //
 
-
 import SwiftUI
 
 struct CityListView: View {
@@ -54,7 +53,6 @@ struct CityListView: View {
                     await viewModel.refreshCities()
                 }
 
-                // Initial loading overlay
                 if viewModel.isLoading && viewModel.cities.isEmpty {
                     loadingOverlay
                 }
@@ -78,16 +76,16 @@ struct CityListView: View {
                 .font(.system(size: 48, weight: .light))
                 .foregroundColor(AppColors.primaryGreen.opacity(0.6))
 
-            Text(LocalizationKey.noCitiesFound)
+            Text("No Cities Found")
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .foregroundColor(AppColors.primaryText)
 
-            Text(LocalizationKey.unableToLoadCities)
+            Text("Unable to load cities. Please try again.")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(AppColors.secondaryText)
                 .multilineTextAlignment(.center)
 
-            Button(LocalizationKey.retry) {
+            Button("Retry") {
                 Task { await viewModel.retry() }
             }
             .font(.system(size: 16, weight: .semibold))
@@ -108,11 +106,11 @@ struct CityListView: View {
                 .font(.system(size: 48, weight: .light))
                 .foregroundColor(AppColors.primaryGreen.opacity(0.6))
 
-            Text(LocalizationKey.noResults)
+            Text("No Results")
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .foregroundColor(AppColors.primaryText)
 
-            Text("\(LocalizationKey.noCitiesMatch) '\(viewModel.searchText)'")
+            Text("No cities match '\(viewModel.searchText)'")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(AppColors.secondaryText)
                 .multilineTextAlignment(.center)
@@ -152,7 +150,7 @@ struct CityListView: View {
                 Text("🏙️🌍🗺️")
                     .font(.system(size: 28))
 
-                Text(LocalizationKey.exploreWorldCities)
+                Text("Explore World Cities")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .padding(.vertical, 12)
@@ -160,8 +158,6 @@ struct CityListView: View {
                     .background(AppColors.buttonGradient)
                     .cornerRadius(14)
             }
-
-
         }
         .shadow(color: AppColors.shadowColor.opacity(0.4), radius: 15, x: 0, y: 8)
     }
@@ -170,11 +166,11 @@ struct CityListView: View {
     private var headerSection: some View {
         HStack {
             VStack(alignment: .leading, spacing: 6) {
-                Text(LocalizationKey.citiesInfo)
+                Text("Cities Info")
                     .font(.system(size: 34, weight: .bold, design: .rounded))
                     .foregroundStyle(AppColors.primaryGradient)
 
-              Text("\(viewModel.cities.count) \(LocalizationKey.citiesLoaded)")
+                Text("\(viewModel.cities.count) cities loaded")
                     .font(.system(size: 16, weight: .medium))
                     .foregroundColor(AppColors.secondaryText)
             }
@@ -191,7 +187,7 @@ struct CityListView: View {
                 .foregroundColor(AppColors.primaryGreen)
                 .font(.system(size: 17, weight: .medium))
 
-            TextField(LocalizationKey.searchCitiesPlaceholder, text: $viewModel.searchText)
+            TextField("Search cities worldwide...", text: $viewModel.searchText)
                 .textFieldStyle(PlainTextFieldStyle())
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.primary)
@@ -236,8 +232,8 @@ struct CityListView: View {
 
             StatCard(
                 icon: viewModel.searchText.isEmpty ? "globe.americas.fill" : "magnifyingglass",
-                title: viewModel.searchText.isEmpty ? LocalizationKey.browse : LocalizationKey.search,
-                value: viewModel.searchText.isEmpty ? LocalizationKey.global : LocalizationKey.active,
+                title: viewModel.searchText.isEmpty ? "Browse" : "Search",
+                value: viewModel.searchText.isEmpty ? "Global" : "Active",
                 color: AppColors.featuredColor
             )
         }
@@ -274,7 +270,7 @@ struct CityListView: View {
                         .scaleEffect(0.9)
                         .tint(AppColors.primaryGreen)
 
-                  Text(LocalizationKey.loadingMoreCities)
+                    Text("Loading more cities...")
                         .font(.system(size: 15, weight: .medium))
                         .foregroundColor(AppColors.secondaryText)
                 }
@@ -302,7 +298,6 @@ struct CityListView: View {
         }
     }
 }
-
 
 #Preview {
     CityListView()

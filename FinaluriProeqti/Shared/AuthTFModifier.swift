@@ -17,3 +17,17 @@ struct AuthTFModifier: ViewModifier{
       .padding(.horizontal, 24)
   }
 }
+
+struct PrettyTextFieldModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16, weight: .medium))
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color.white)
+                    .shadow(color: AppColors.cardShadow.opacity(0.1), radius: 8, x: 0, y: 4)
+            )
+    }
+}

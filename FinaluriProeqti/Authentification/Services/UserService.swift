@@ -15,7 +15,6 @@ class UserService: ObservableObject {
     static let shared = UserService()
 
     init() {
-      // Check if user is already authenticated on app start
       if Auth.auth().currentUser != nil {
           Task {
               try? await fetchCurrentUser()
@@ -26,7 +25,6 @@ class UserService: ObservableObject {
     @MainActor
     func fetchCurrentUser() async throws {
         guard let uid = Auth.auth().currentUser?.uid else {
-            print("No authenticated user found")
             return
         }
 
@@ -34,9 +32,7 @@ class UserService: ObservableObject {
             let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
             let user = try snapshot.data(as: User.self)
             self.currentUser = user
-            print("User data fetched successfully: \(user.fullname)")
         } catch {
-            print("Error fetching user data: \(error)")
             throw error
         }
     }

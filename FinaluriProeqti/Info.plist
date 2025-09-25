@@ -5,8 +5,6 @@
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
-		<string>fr</string>
-		<string>it</string>
 	</array>
 </dict>
 </plist>

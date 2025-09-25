@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "city-explorer-logo-1024x1024 2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -26,6 +27,30 @@
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
+    },
+    {
+      "filename" : "city-explorer-logo-32x32.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "filename" : "city-explorer-logo-128x128.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "filename" : "city-explorer-logo-256x256.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "filename" : "city-explorer-logo-512x512.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "512x512"
     }
   ],
   "info" : {

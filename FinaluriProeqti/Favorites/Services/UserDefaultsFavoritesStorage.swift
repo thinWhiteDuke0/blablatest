@@ -16,7 +16,6 @@ class UserDefaultsFavoritesStorage: FavoritesStoraging {
             let data = try JSONEncoder().encode(Array(favorites))
             UserDefaults.standard.set(data, forKey: key)
         } catch {
-            print("Failed to save favorites: \(error)")
         }
     }
     
@@ -29,7 +28,6 @@ class UserDefaultsFavoritesStorage: FavoritesStoraging {
             let cities = try JSONDecoder().decode([City].self, from: data)
             return Set(cities)
         } catch {
-            print("Failed to load favorites: \(error)")
             return Set<City>()
         }
     }

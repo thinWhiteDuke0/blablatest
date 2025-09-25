@@ -1,6 +1,24 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "@%@" : {
+
+    },
+    "%.0fK" : {
+      "comment" : "Population in thousands"
+    },
+    "%.1fM" : {
+      "comment" : "Population in millions"
+    },
+    "%lld cities loaded" : {
+
+    },
+    "%lld favorite cities" : {
+
+    },
+    "🏙️🌍🗺️" : {
+
+    },
     "About" : {
       "localizations" : {
         "en" : {
@@ -18,6 +36,7 @@
       }
     },
     "Active" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -34,6 +53,7 @@
       }
     },
     "All" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -98,6 +118,7 @@
       }
     },
     "Browse" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -129,6 +150,23 @@
         }
       }
     },
+    "cities" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cities"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ქალაქი"
+          }
+        }
+      }
+    },
     "Cities" : {
       "localizations" : {
         "en" : {
@@ -146,6 +184,7 @@
       }
     },
     "Cities Info" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -157,6 +196,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ქალაქების ინფორმაცია"
+          }
+        }
+      }
+    },
+    "cities loaded" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cities loaded"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ქალაქი ჩაიტვირთა"
           }
         }
       }
@@ -210,6 +266,7 @@
       }
     },
     "Close" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -226,6 +283,7 @@
       }
     },
     "Coordinates" : {
+      "comment" : "Coordinates label",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -242,6 +300,7 @@
       }
     },
     "Country" : {
+      "comment" : "Country stat title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -258,6 +317,7 @@
       }
     },
     "Country Code" : {
+      "comment" : "Country code label",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -290,6 +350,7 @@
       }
     },
     "Delete" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -305,21 +366,25 @@
         }
       }
     },
-    "Done" : {
+    "Discover" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Done"
+            "value" : "Discover"
           }
         },
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "დასრულდა"
+            "value" : "აღმოაჩინე"
           }
         }
       }
+    },
+    "Discover %@" : {
+      "comment" : "Discover city format"
     },
     "Don't have an account?" : {
       "localizations" : {
@@ -337,7 +402,25 @@
         }
       }
     },
+    "Done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დასრულდა"
+          }
+        }
+      }
+    },
     "Edit" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -434,6 +517,7 @@
       }
     },
     "Explore" : {
+      "comment" : "Explore title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -445,22 +529,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "შესწავლა"
-          }
-        }
-      }
-    },
-    "Explore World Cities" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Explore World Cities"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "შეისწავლე მსოფლიო ქალაქები"
           }
         }
       }
@@ -481,6 +549,23 @@
         }
       }
     },
+    "Explore World Cities" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore World Cities"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შეისწავლე მსოფლიო ქალაქები"
+          }
+        }
+      }
+    },
     "Exploring the World..." : {
       "localizations" : {
         "en" : {
@@ -497,7 +582,25 @@
         }
       }
     },
+    "favorite cities" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "favorite cities"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "რჩეული ქალაქები"
+          }
+        }
+      }
+    },
     "Favorites" : {
+      "comment" : "Favorites title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -514,6 +617,7 @@
       }
     },
     "Featured" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -530,6 +634,7 @@
       }
     },
     "Find amazing places and hidden gems" : {
+      "comment" : "Explore description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -545,23 +650,8 @@
         }
       }
     },
-    "Forgot Password" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forgot Password"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "დაავიწყდა პაროლი"
-          }
-        }
-      }
-    },
     "Forgot Password?" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -578,6 +668,7 @@
       }
     },
     "Full Name" : {
+      "comment" : "Full name label",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -594,6 +685,7 @@
       }
     },
     "Global" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -626,6 +718,7 @@
       }
     },
     "Keep track of cities you love" : {
+      "comment" : "Favorites description",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -642,6 +735,7 @@
       }
     },
     "Loading more cities..." : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -658,6 +752,7 @@
       }
     },
     "Loading..." : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -722,6 +817,7 @@
       }
     },
     "N/A" : {
+      "comment" : "Not available",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -738,6 +834,7 @@
       }
     },
     "No Cities Found" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -752,6 +849,26 @@
           }
         }
       }
+    },
+    "No cities match" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No cities match"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "არცერთი ქალაქი არ შეესაბამება"
+          }
+        }
+      }
+    },
+    "No cities match '%@'" : {
+
     },
     "No Favorites Yet" : {
       "localizations" : {
@@ -770,6 +887,7 @@
       }
     },
     "No Results" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -786,6 +904,7 @@
       }
     },
     "Population" : {
+      "comment" : "Population stat title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -802,6 +921,7 @@
       }
     },
     "Population Count" : {
+      "comment" : "Population count label",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -834,6 +954,7 @@
       }
     },
     "Recent" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -850,6 +971,7 @@
       }
     },
     "Region" : {
+      "comment" : "Region label\nRegion stat title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -866,6 +988,7 @@
       }
     },
     "Retry" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -882,6 +1005,7 @@
       }
     },
     "Save" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -898,6 +1022,7 @@
       }
     },
     "Save City" : {
+      "comment" : "Save city subtitle",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -914,6 +1039,7 @@
       }
     },
     "Search" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -930,6 +1056,7 @@
       }
     },
     "Search cities worldwide..." : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -962,6 +1089,7 @@
       }
     },
     "Share" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1042,6 +1170,7 @@
       }
     },
     "Unable to load cities. Please try again." : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1058,6 +1187,7 @@
       }
     },
     "View on Map" : {
+      "comment" : "View on map button",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1088,23 +1218,7 @@
           }
         }
       }
-    },
-    "cities loaded" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "cities loaded"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ქალაქი ჩაიტვირთა"
-          }
-        }
-       }
-      }
-    },
+    }
+  },
   "version" : "1.0"
 }
