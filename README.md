@@ -21,8 +21,20 @@ For demonstration and testing purposes, a test account is available:
 - **Default:** Portrait mode for all screens  
 - **Exception:** Profile view supports both portrait and landscape orientations  
 
-Check Preview:
-https://git.epam.com/giorgi_manjavidze/finalapp/-/blob/main/RPReplay_Final1758839414.MP4?ref_type=heads
+Video Preview:
+||[Video Link](https://git.epam.com/giorgi_manjavidze/finalapp/-/blob/main/RPReplay_Final1758839414.MP4?ref_type=heads)||
+
+Image Preview:
+||[Image1](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4977.PNG?ref_type=heads)||
+[Image2](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4978.PNG?ref_type=heads)||
+[Image3](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4979.PNG?ref_type=heads)||
+[Image4](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4980.PNG?ref_type=heads)||
+[Image5](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4981.PNG?ref_type=heads)||
+[Image6](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4982.PNG?ref_type=heads)||
+[Image7](https://git.epam.com/giorgi_manjavidze/finalapp/-/raw/main/Preview/Images/IMG_4983.PNG?ref_type=heads)||
+
+
+
 
 
 ## Features
