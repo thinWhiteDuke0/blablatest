@@ -21,7 +21,8 @@ For demonstration and testing purposes, a test account is available:
 - **Default:** Portrait mode for all screens  
 - **Exception:** Profile view supports both portrait and landscape orientations  
 
-Landscape mode provides an enhanced viewing experience for profile information.
+Check Preview:
+https://git.epam.com/giorgi_manjavidze/finalapp/-/blob/main/RPReplay_Final1758839414.MP4?ref_type=heads
 
 
 ## Features
