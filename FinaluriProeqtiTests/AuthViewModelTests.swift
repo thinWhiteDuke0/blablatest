@@ -1,15 +1,4 @@
 //
-//  LoginViewModelTests.swift
-//  FinaluriProeqti
-//
-//  Created by Giorgi Manjavidze on 26.09.25.
-//
-
-
-import XCTest
-@testable import FinaluriProeqti
-
-//
 //  AuthViewModelTests.swift
 //  FinaluriProeqti
 //
